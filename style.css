@@ -1,0 +1,33 @@
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px solid black;
+    height: 600px;
+    width: 100vh;
+}
+
+.display {
+    display: flex;
+    border: 1px solid black;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+
+.screen {
+}
+
+.content {
+    display: grid;
+    flex-grow: 4;
+    flex-direction: column;
+    grid-template-columns: repeat(5, auto);
+}
+
+.btn {
+    border: 1px solid black;
+    text-align: center;
+    
+}
