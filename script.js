@@ -49,19 +49,27 @@ function operateArray(numbersArray) {
 function arrangeNumber(numbers) {
     let array = [];
     let num = "";
+    let lastIndexOfOperator = 0;
 
     for(let i = 0; i < numbers.length; i++) {
         if(numbers[i] === "+" || numbers[i] === "-" || numbers[i] === "x" || numbers[i] === "/") {
             array.push(num);
             array.push(numbers[i]);
             num = "";
+            lastIndexOfOperator = i;
         } else {
         num += numbers[i];
 
         }
 
     }
-    array.push(numbers[numbers.length - 1]);
+
+    num = '';
+
+    for(let i = lastIndexOfOperator + 1; i < numbers.length; i++) {
+        num += numbers[i];
+    }
+    array.push(num);
     return array;
 }
 
